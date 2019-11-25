@@ -1,0 +1,13 @@
+*~
+elpa
+*eld
+.last-package-update-day
+.session
+.smex-items
+.uptimes.el
+company-statistics-cache.el
+custom.el
+eshell
+network-security.data
+recentf
+history
