@@ -9,7 +9,8 @@
  (setq-default neo-show-hidden-files t)
  (setq
   neo-window-fixed-size nil
-  neo-window-width 30)
+  neo-window-width 30
+  neo-smart-open t)
  :bind
  ("C-n" . neotree-toggle))
 

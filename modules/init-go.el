@@ -18,5 +18,8 @@
             (setq tab-width 4)
             (setq indent-tabs-mode 1)))
 
+(with-eval-after-load 'go-mode
+  (define-key go-mode-map (kbd "C-c C-d") nil))
+
 (provide 'init-go)
 ;;; init-go.el ends here

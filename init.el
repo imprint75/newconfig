@@ -3,7 +3,7 @@
 ;;; Code:
 
 ;;; Expand everything under lisp and functions directories
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "functions" user-emacs-directory))
 
 (require 'init-package)
@@ -15,6 +15,7 @@
 (require 'init-neotree)
 (require 'init-projectile)
 (require 'init-themes) ;;; General theme setup
+(require 'init-utils)
 (require 'init-yasnippet)
 
 ;;; Global config stuff
