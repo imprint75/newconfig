@@ -8,10 +8,7 @@
   :pin melpa-stable
   :config
   (setq-default magit-diff-refine-hunk t)
-  (global-set-key (kbd "C-c m s") 'magit-status)
-  (global-set-key (kbd "C-c m p") 'magit-push)
-  (global-set-key (kbd "C-c m l") 'magit-pull)
-  (global-set-key (kbd "C-c m g") 'magit-log))
+  (global-set-key (kbd "C-c m s") 'magit-status))
 
 (provide 'init-git)
 ;;; init-git.el ends here
