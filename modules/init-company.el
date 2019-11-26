@@ -4,7 +4,9 @@
 
 (use-package
   dumb-jump
-  :ensure t)
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c d g") 'dumb-jump-go))
 
 (use-package
   company
