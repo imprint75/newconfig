@@ -19,8 +19,7 @@
   (kill-line)
   (yank)
   (newline)
-  (yank)
-)
+  (yank))
 
 (provide 'line)
 ;;; line.el ends here
