@@ -16,6 +16,13 @@
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
   :ensure t)
 
+(use-package
+  beacon
+  :ensure t
+  :init
+  (add-hook 'after-init-hook 'beacon-mode))
+
+(show-paren-mode 1)
 (tool-bar-mode -1)
 (electric-pair-mode 1)
 (global-linum-mode 1)
