@@ -45,5 +45,17 @@
   swiper
   :ensure t)
 
+(use-package
+  ranger
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c r") 'ranger)
+  (ranger-override-dired-mode t))
+
+(use-package
+  highlight
+  :ensure t
+  :ensure-system-package highlight)
+
 (provide 'init-helm)
 ;;; init-helm ends here
