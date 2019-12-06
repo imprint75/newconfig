@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-;;; Expand everything under lisp and functions directories
+;;; Expand everything under modules and functions directories
 (add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "functions" user-emacs-directory))
 
