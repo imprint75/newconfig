@@ -22,6 +22,7 @@
   :init
   (add-hook 'after-init-hook 'beacon-mode))
 
+(column-number-mode 1)
 (show-paren-mode 1)
 (tool-bar-mode -1)
 (electric-pair-mode 1)
