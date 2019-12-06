@@ -41,8 +41,6 @@
 (add-to-list 'completion-styles 'initials t)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(global-set-key (kbd "C-s") 'swiper)
-(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-o") 'other-window)
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
