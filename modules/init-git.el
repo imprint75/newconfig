@@ -2,6 +2,11 @@
 ;;; Commentary:
 ;;; Code: Magit
 
+(use-package magit-popup
+  :ensure t ; make sure it is installed
+  :demand t ; make sure it is loaded
+  )
+
 (use-package
   magit
   :ensure t

@@ -34,6 +34,10 @@
   paredit-everywhere
   :ensure t)
 
+(use-package
+  flycheck
+  :ensure t)
+
 (setq tab-always-indent 'complete)
 (setq debug-on-error t)
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -45,6 +49,9 @@
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+(global-set-key (kbd "<f12>") 'helm-projectile-ag)
+(global-set-key (kbd "<f11>") 'ivy-switch-buffer)
+(global-set-key (kbd "<f1>") 'magit-status)
 
 ;; revisit. from purcell
 (add-hook 'after-init-hook 'recentf-mode)
