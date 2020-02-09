@@ -11,6 +11,7 @@
 (require 'init-helm)
 (require 'init-company)
 (require 'init-git)
+(require 'init-lsp)
 (require 'init-go)
 (require 'init-neotree)
 (require 'init-projectile)
