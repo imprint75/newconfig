@@ -9,7 +9,26 @@
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :hook (go-mode . lsp-deferred))
+  :hook (go-mode . lsp-deferred)
+  :config
+   (require 'lsp-clients)
+   (add-hook 'python-mode-hook 'lsp)
+  ;; make sure we have lsp-imenu everywhere we have LSP
+  ;; (require 'lsp-imenu)
+  ;; (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)  
+  ;; get lsp-python-enable defined
+  ;; NB: use either projectile-project-root or ffip-get-project-root-directory
+  ;;     or any other function that can be used to find the root directory of a project
+  ;; (lsp-define-stdio-client lsp-python "python"
+   ;; #'projectile-project-root
+   ;; '("pyls"))
+   
+  ;; make sure this is activated when python-mode is activated
+  ;; lsp-python-enable is created by macro above 
+  ;; (add-hook 'python-mode-hook
+   ;; (lambda ()
+   ;; (lsp-python-enable)))
+)
 
 ;;Set up before-save hooks to format buffer and add/delete imports.
 ;;Make sure you don't have other gofmt/goimports hooks enabled.
