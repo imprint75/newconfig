@@ -5,38 +5,23 @@
 (setq lsp-gopls-staticcheck t)
 (setq lsp-eldoc-render-all t)
 (setq lsp-gopls-complete-unimported t)
-
+  
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
   :hook (go-mode . lsp-deferred)
   :config
-   (require 'lsp-clients)
-   (add-hook 'python-mode-hook 'lsp)
-  ;; make sure we have lsp-imenu everywhere we have LSP
-  ;; (require 'lsp-imenu)
-  ;; (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)  
-  ;; get lsp-python-enable defined
-  ;; NB: use either projectile-project-root or ffip-get-project-root-directory
-  ;;     or any other function that can be used to find the root directory of a project
-  ;; (lsp-define-stdio-client lsp-python "python"
-   ;; #'projectile-project-root
-   ;; '("pyls"))
-   
-  ;; make sure this is activated when python-mode is activated
-  ;; lsp-python-enable is created by macro above 
-  ;; (add-hook 'python-mode-hook
-   ;; (lambda ()
-   ;; (lsp-python-enable)))
+  (require 'lsp-clients)
+  (add-hook 'python-mode-hook #'lsp) ;;; https://github.com/davidhalter/jedi/issues/1484#issuecomment-582295692
 )
 
 ;;Set up before-save hooks to format buffer and add/delete imports.
 ;;Make sure you don't have other gofmt/goimports hooks enabled.
 
-;; (defun lsp-go-install-save-hooks ()
-;;   (add-hook 'before-save-hook #'lsp-format-buffer t t)
-;;   (add-hook 'before-save-hook #'lsp-organize-imports t t))
-;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
 ;;Optional - provides fancier overlays.
 

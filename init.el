@@ -11,8 +11,8 @@
 (require 'init-helm)
 (require 'init-company)
 (require 'init-git)
-;; (require 'init-lsp)
-(require 'init-go)
+(require 'init-lsp)
+;; (require 'init-go)
 (require 'init-neotree)
 (require 'init-projectile)
 ;; (require 'init-python)
@@ -67,3 +67,13 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;; don't store auto-saves in projects
+(setq backup-by-copying t      ; don't clobber symlinks
+      backup-directory-alist '(("." . "~/.emacs-saves"))    ; don't litter my fs tree
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)       ; use versioned backups
+(setq auto-save-file-name-transforms
+      `((".*" "~/.emacs-saves" t)))

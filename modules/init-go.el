@@ -1,13 +1,15 @@
+
 ;;; init-go.el --- Go mode setup -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
-(setq exec-path (append '("/Users/seansmith/go/bin") exec-path))
-(setq exec-path (append '("/Users/seansmith/go/pkg") exec-path))
-(setenv "PATH" (concat "/Users/seansmith/go/bin:" (getenv "PATH")))
-(setenv "PATH" (concat "/Users/seansmith/go/pkg:" (getenv "PATH")))
-(setenv "PATH" (concat "/usr/local/bin/go:" (getenv "PATH")))
-(setenv "GOPATH" "/Users/seansmith/go")
+;; (setq exec-path (append '("/Users/seansmith/go/bin") exec-path))
+;; (setq exec-path (append '("/Users/seansmith/go/pkg") exec-path))
+;; (setq exec-path (append '("/usr/local/opt/go@1.13/bin") exec-path))
+;; (setenv "PATH" (concat "/Users/seansmith/go/bin:" (getenv "PATH")))
+;; (setenv "PATH" (concat "/Users/seansmith/go/pkg:" (getenv "PATH")))
+;; (setenv "PATH" (concat "/usr/local/opt/go@1.13/bin/go:" (getenv "PATH")))
+;; (setenv "GOPATH" "/Users/seansmith/go")
 
 ;; (use-package go-mode
 ;;   :defer t
@@ -39,7 +41,7 @@
  go-mode
  :ensure t
  :config
- (setq tab-width 4)
+ (setq tab-width 3)
  (setq indent-tabs-mode 1)
  (setq go-packages-function 'go-packages-go-list))
 
