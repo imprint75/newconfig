@@ -10,7 +10,7 @@
 (use-package
   magit
   :ensure t
-  :pin melpa-stable
+  ;; :pin melpa-stable
   :config
   (setq-default magit-diff-refine-hunk t)
   (global-set-key (kbd "C-c m s") 'magit-status))

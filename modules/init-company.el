@@ -13,7 +13,7 @@
   :ensure t
   :init
   (global-company-mode)
-  (company-statistics-mode)
+  ;; (company-statistics-mode)
   :bind
   (:map company-active-map
 	([tab] . company-complete-common-or-cycle)

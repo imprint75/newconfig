@@ -11,7 +11,7 @@
   :commands (lsp lsp-deferred)
   :hook (go-mode . lsp-deferred)
   :config
-  (require 'lsp-clients)
+  ;; (require 'lsp-clients)
   (add-hook 'python-mode-hook #'lsp) ;;; https://github.com/davidhalter/jedi/issues/1484#issuecomment-582295692
 )
 
@@ -25,11 +25,11 @@
 
 ;;Optional - provides fancier overlays.
 
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode
-  :init
-)
+;; (use-package lsp-ui
+;;   :ensure t
+;;   :commands lsp-ui-mode
+;;   :init
+;; )
 
 ;;Company mode is a standard completion package that works well with lsp-mode.
 ;;company-lsp integrates company mode completion with lsp-mode.
@@ -41,9 +41,9 @@
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1))
 
-(use-package company-lsp
-  :ensure t
-  :commands company-lsp)
+;; (use-package company-lsp
+;;   :ensure t
+;;   :commands company-lsp)
 
 ;;Optional - provides snippet support.
 
@@ -60,7 +60,8 @@
       lsp-ui-peek-enable t
       lsp-ui-sideline-enable t
       lsp-ui-imenu-enable t
-      lsp-ui-flycheck-enable t)
+      ;; lsp-ui-flycheck-enable t
+      )
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here

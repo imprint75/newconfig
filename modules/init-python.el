@@ -2,6 +2,22 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Tips on getting pylsp working
+
+;; Install pip
+;; curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+;; python3 get-pip.py
+;; /Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
+
+;; Install pylsp
+;; pip3 install 'python-lsp-server[all]'
+;; pip3 install python-lsp-server
+;; pylsp --help 
+
+;; Add to Path
+;; echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
+;; source ~/.bashrc
+
 (use-package jedi
   :ensure t)
 

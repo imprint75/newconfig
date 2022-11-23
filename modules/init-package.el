@@ -2,13 +2,21 @@
 ;;; Commentary: Package install, use-package
 ;;; Code:
 
-(setq package-list '(use-package))
+(setq package-list
+      '(use-package))
+
+;; attempt to improve
 (setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-        ("marmalade" . "https://marmalade-repo.org/packages/")
-        ("melpa" . "https://melpa.org/packages/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")
-        ("org" . "http://orgmode.org/elpa/")))
+      '(("melpa" . "https://melpa.org/packages/")
+        ("org"   . "https://orgmode.org/elpa/")
+        ("gnu"   . "https://elpa.gnu.org/packages/")))
+ 
+;; (setq package-archives
+;;       '(("gnu" . "http://elpa.gnu.org/packages/")
+;;         ("marmalade" . "https://marmalade-repo.org/packages/")
+;;         ("melpa" . "https://melpa.org/packages/")
+;;         ("melpa-stable" . "https://stable.melpa.org/packages/")
+;;         ("org" . "http://orgmode.org/elpa/")))
 
 (package-initialize)
 
