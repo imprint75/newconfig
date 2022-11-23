@@ -18,8 +18,13 @@
 ;; echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 ;; source ~/.bashrc
 
+(add-to-list 'exec-path "/Users/sean.smith2/Library/Python/3.9/bin")
+
 ;; set path to pylsp
 (setq lsp-pyls-server-command "/Users/sean.smith2/Library/Python/3.9/bin/pylsp")
+
+;; pip install pyright
+;; pyright --help  
 
 ;; trying pyright
 (use-package lsp-pyright
