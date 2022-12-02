@@ -11,13 +11,6 @@
         ("org"   . "https://orgmode.org/elpa/")
         ("gnu"   . "https://elpa.gnu.org/packages/")))
  
-;; (setq package-archives
-;;       '(("gnu" . "http://elpa.gnu.org/packages/")
-;;         ("marmalade" . "https://marmalade-repo.org/packages/")
-;;         ("melpa" . "https://melpa.org/packages/")
-;;         ("melpa-stable" . "https://stable.melpa.org/packages/")
-;;         ("org" . "http://orgmode.org/elpa/")))
-
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -45,6 +38,26 @@
  (setq auto-package-update-delete-old-versions t)
  (setq auto-package-update-hide-results t)
  (auto-package-update-maybe))
+
+;;; Global config stuff
+(use-package
+  paredit
+  :init
+  (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+  (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+  (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+  (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+  :ensure t)
+
+(use-package
+  paredit-everywhere
+  :ensure t)
+
+(use-package
+  flycheck
+  :ensure t)
 
 (provide 'init-package)
 ;;; init-package.el ends here

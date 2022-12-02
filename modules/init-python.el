@@ -1,4 +1,4 @@
-;;; init-go.el --- Go mode setup -*- lexical-binding: t -*-
+;;; init-python.el --- Python mode setup -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -13,6 +13,10 @@
 ;; pip3 install 'python-lsp-server[all]'
 ;; pip3 install python-lsp-server
 ;; pylsp --help 
+
+;; Install NodeJS and NPM
+;; https://nodejs.org/en/download/
+;; these are reqs
 
 ;; Add to Path
 ;; echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc

@@ -25,11 +25,11 @@
 
 ;;Optional - provides fancier overlays.
 
-;; (use-package lsp-ui
-;;   :ensure t
-;;   :commands lsp-ui-mode
-;;   :init
-;; )
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode
+  :init
+)
 
 ;;Company mode is a standard completion package that works well with lsp-mode.
 ;;company-lsp integrates company mode completion with lsp-mode.
