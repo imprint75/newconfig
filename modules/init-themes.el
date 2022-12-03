@@ -25,6 +25,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Path in header
 (defun with-face (str &rest face-plist)
   (propertize str 'face face-plist))
+
 (defun sl/make-header ()
   ""
   (let* ((sl/full-header (abbreviate-file-name buffer-file-name))

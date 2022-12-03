@@ -39,22 +39,6 @@
  (setq auto-package-update-hide-results t)
  (auto-package-update-maybe))
 
-;;; Global config stuff
-(use-package
-  paredit
-  :init
-  (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
-  (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-  (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
-  :ensure t)
-
-(use-package
-  paredit-everywhere
-  :ensure t)
-
 (use-package
   flycheck
   :ensure t)
