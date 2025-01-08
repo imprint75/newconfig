@@ -20,7 +20,7 @@
 ;;; individual LSP language setup  
 (require 'init-go)
 (require 'init-python)
-(require 'init-typescript)
+;; (require 'init-typescript)
 ;;; some general stuff
 (require 'init-general)
 (require 'init-keys)
