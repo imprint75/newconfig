@@ -22,10 +22,13 @@
 ;; echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 ;; source ~/.bashrc
 
-(add-to-list 'exec-path "/Users/sean.smith2/Library/Python/3.9/bin")
+;; macos example for my location
+;; (add-to-list 'exec-path "/Users/seans/Library/Python/3.9/bin")
 
 ;; set path to pylsp
-(setq lsp-pyls-server-command "/Users/sean.smith2/Library/Python/3.9/bin/pylsp")
+;; macos example for my location
+;; macos example for my location
+;; (setq lsp-pyls-server-command "/Users/seans/Library/Python/3.9/bin/pylsp")
 
 ;; pip install pyright
 ;; pyright --help  
@@ -33,9 +36,10 @@
 ;; trying pyright
 (use-package lsp-pyright
   :ensure t
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
   :hook (python-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))  ; or lsp-deferred
+                         (require 'lsp-pyright)
+                         (lsp))))  ; or lsp-deferred
 
 (provide 'init-python)
 ;;; init-python.el ends here
