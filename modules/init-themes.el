@@ -78,7 +78,7 @@
 (show-paren-mode 1)
 (tool-bar-mode -1)
 (electric-pair-mode 1)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 (provide 'init-themes)
 ;;; init-themes.el ends here
