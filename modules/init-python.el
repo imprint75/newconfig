@@ -41,5 +41,10 @@
                          (require 'lsp-pyright)
                          (lsp))))  ; or lsp-deferred
 
+(use-package python-black
+  :demand t
+  :after python
+  :hook (python-mode . python-black-on-save-mode))
+
 (provide 'init-python)
 ;;; init-python.el ends here

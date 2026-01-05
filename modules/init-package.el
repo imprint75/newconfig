@@ -27,9 +27,9 @@
  (when (memq window-system '(mac ns x))
    (exec-path-from-shell-initialize)))
 
-(use-package
- use-package-ensure-system-package
- :ensure t)
+;; (use-package
+;;  use-package-ensure-system-package
+;;  :ensure t)
 
 (use-package
  auto-package-update

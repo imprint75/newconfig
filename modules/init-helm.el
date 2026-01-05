@@ -21,10 +21,10 @@
    helm-ag-use-agignore                  t)
   (global-set-key (kbd "M-x") 'helm-M-x))
 
-(use-package
- helm-ag
- :ensure t
- :after (helm ag))
+;; (use-package
+;;  helm-ag
+;;  :ensure t
+;;  :after (helm ag))
 
 (use-package
  ivy
@@ -58,7 +58,8 @@
 (use-package
   highlight
   :ensure t
-  :ensure-system-package highlight)
+  ;; :ensure-system-package highlight
+  )
 
 (provide 'init-helm)
 ;;; init-helm ends here
