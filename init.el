@@ -24,6 +24,7 @@
 ;;; some general stuff
 (require 'init-general)
 (require 'init-keys)
+(require 'init-claude)
 ;; don't store customizations in init
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)

@@ -17,6 +17,7 @@
 (global-set-key (kbd "C-s-h") 'shrink-window-horizontally)
 (global-set-key (kbd "C-s-k") 'enlarge-window)
 (global-set-key (kbd "C-s-j") 'shrink-window)
+(global-set-key (kbd "C-c C-t") 'claude-code-ide-toggle)
 
 
 (provide 'init-keys)

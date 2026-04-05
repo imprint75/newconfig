@@ -7,9 +7,10 @@
 
 ;; attempt to improve
 (setq package-archives
-      '(("melpa" . "https://melpa.org/packages/")
-        ("org"   . "https://orgmode.org/elpa/")
-        ("gnu"   . "https://elpa.gnu.org/packages/")))
+      '(("melpa"   . "https://melpa.org/packages/")
+        ("nongnu"  . "https://elpa.nongnu.org/nongnu/")
+        ("org"     . "https://orgmode.org/elpa/")
+        ("gnu"     . "https://elpa.gnu.org/packages/")))
  
 (package-initialize)
 
@@ -25,6 +26,12 @@
  :ensure t
  :config
  (when (memq window-system '(mac ns x))
+   (setq exec-path-from-shell-variables
+         (append exec-path-from-shell-variables
+                 '("CLAUDE_CODE_USE_VERTEX"
+                   "ANTHROPIC_MODEL"
+                   "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY"
+                   "ANTHROPIC_VERTEX_PROJECT_ID")))
    (exec-path-from-shell-initialize)))
 
 ;; (use-package
