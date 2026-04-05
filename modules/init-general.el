@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Trying to install yaml-mode
+(use-package yaml-mode
+  :ensure t)
+
 ;;; Global config stuff
 (use-package
   paredit
