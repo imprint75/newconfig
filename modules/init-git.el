@@ -13,7 +13,8 @@
   ;; :pin melpa-stable
   :config
   (setq-default magit-diff-refine-hunk t)
-  (global-set-key (kbd "C-c m s") 'magit-status))
+  (global-set-key (kbd "C-c m s") 'magit-status)
+  (add-hook 'git-commit-mode-hook (lambda () (company-mode -1))))
 
 (provide 'init-git)
 ;;; init-git.el ends here
